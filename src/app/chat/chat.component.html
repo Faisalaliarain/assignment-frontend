@@ -1,0 +1,55 @@
+<div  fxLayout="column" fxLayoutAlign="space-around stretch" fxLayoutGap="20px" style="margin-top: 20px">
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxLayout="row" fxLayoutAlign="start start" fxFlex.gt-lg="70" fxFlex.gt-md="78" fxFlex.gt-sm="100"
+         fxFlex.gt-xs="100" fxFlexOffset.gt-lg="15" fxFlexOffset.gt-md="11" fxFlexOffset.gt-sm="" fxFlexOffset.gt-xs="0"
+         fxLayoutGap="30px">
+      <div fxFlex="" id="chat-cont" fxLayout="column"
+           style="border: 2px solid #f2f2f2; border-radius: 15px">
+        <small *ngIf="isTyping === true" class="color-pink">typing...</small>
+        <div id="scroll">
+          <div *ngFor="let msg of messages" style=" width: 100%;">
+            <div *ngIf="msg.createdBy._id === currentUser.id"
+                 fxLayout="column" fxLayoutAlign="end start" style="width: 100%">
+              <div fxLayout="row" fxLayoutAlign="end start" style="width: 100%;">
+
+                <p>
+                  <span [innerHTML]="msg.text"></span><br />
+                  <br />
+                  <small style="margin-top: 5px;display: block;">{{
+                    msg.createdAt | date: "MMMM dd, yyyy HH:mm"
+                    }}</small>
+                </p>
+              </div>
+            </div>
+                <div *ngIf="msg.createdBy._id !== currentUser.id" fxLayout="column" fxLayoutAlign="end end" style="width: 100%">
+                  <div class="" fxLayout="row" fxLayoutAlign="start start" style="width: 100%;">
+                    <p class="p-left-message">
+                      <span [innerHTML]="msg.text"></span> <br />
+                      <br />
+                      <small style="margin-top: 5px;display: block;">{{
+                        msg.createdAt | date: "MMMM dd, yyyy HH:mm"
+                        }}</small>
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div fxFlex="" fxLayout="column"
+     style="background-color: #fff; border: 1px solid rgb(204, 197, 197); margin: 12px;">
+  <input  (keypress)="typing()" (keyup.enter)="sendMessage()" [(ngModel)]="message" matInput type="text"
+          placeholder="Type your message here..." />
+  <button mat-raised-button color="primary" (click)="sendMessage()" style="
+              width: 100px;
+              margin: auto;
+              margin-right: 5px;
+              margin-bottom: -20px;
+              top: -28px">
+    Send
+  </button>
+</div>

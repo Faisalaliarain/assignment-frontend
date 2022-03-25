@@ -1,0 +1,150 @@
+.background-gr-color {
+  background-color: #ffffff;
+  width: 100%
+}
+
+.search-header {
+  height: 80px;
+  position: relative;
+  top: -40px;
+  border-bottom: 1px solid #ccc;
+  padding: 0 20px;
+}
+  .btn-cont {
+                 position: relative;
+                 top: 12px;
+               }
+
+#rooms-cont .list-active {
+  background-color: #fef3f9;
+  border-color: #ff0080;
+}
+  mat-list-item {
+    height: 120px;
+    border: 1px solid #f2f2f2;
+    border-radius: 15px;
+    background: #ffffff;
+    margin-bottom: 15px;
+}
+  .mat-list-avatar {
+    height: 70px;
+    width: 70px;
+  }
+.online {
+  width: 15px;
+  height: 15px;
+  color: #98ff96;
+  border-radius: 50%;
+}
+.color-pink {
+  color: #ff0080
+}
+.content {
+  width: 100%;
+  color: #808080;
+  margin: auto 15px;
+  line-height: 23px;
+}
+  p {
+    margin: 3px 2px;
+  }
+
+  h3 {
+    margin: 3px 2px;
+    font-size: 16px;
+  }
+    .icon-size-large{
+    font-size: 36px;
+    margin: auto 15px;
+
+  }
+.p-right-message {
+  border-radius: 5px;
+  text-align: justify;
+  padding: 10px;
+  background: #fef3f9;
+  color: #5d5d5d;
+  max-width: 80%;
+  min-width: 80%;
+  line-height: 1.4;
+}
+.p-left-message {
+  border-radius: 5px;
+  background: #f6f6f6;
+  text-align: justify;
+  padding: 10px;
+  color: #5d5d5d;
+  max-width: 80%;
+  min-width: 80%;
+  line-height: 1.4;
+}
+.pp {
+  padding: 10px;
+  max-width: 300px;
+  height: auto;
+}
+#scroll {
+  height: 600px;
+  overflow-y: scroll;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #fff;
+  padding: 10px 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 1px solid #f2f2f2;
+}
+  p {
+    font-size: 13px;
+  }
+    small{
+      opacity: 0.5;
+    }
+.space-from-icon {
+  margin-left: 75px;
+  margin-top: -6px;
+}
+.file-decoration {
+  color: #ff0078;
+}
+.dots {
+  height: 5px;
+  width: 8px;
+  background-color: #808080;
+  border-radius: 50%;
+  box-shadow: 0px 10px 0px #808080, 0px 20px 0px #808080;
+  margin-top: -19px;
+}
+span strong {
+  color: #ff0078 !important;
+  font-weight: bolder !important;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #c4c9cd;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 20px;
+}
+                .dot-active {
+                  background-color: #9acd32;
+                }
+                .inbox-btn {
+                  margin-right: 20px;
+                  width: 170px;
+                  padding: 4px 0;
+                }
+
+::ng-deep chats-com .chat-input-box .mat-form-field-wrapper .mat-form-field-flex {
+  padding-left: 15px
+}
+
+::ng-deep .test {
+  white-space: pre-line
+}
+
+
+

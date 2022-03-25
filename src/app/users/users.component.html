@@ -1,0 +1,21 @@
+<div class="col-md-12">
+  <div class="card card-container">
+       <div class="alert alert-success" *ngIf="!isLoggedIn">
+      Only Login user can see the list of users
+    </div>
+    <div class="alert alert-success" *ngIf="isLoggedIn">
+      <h2> <input type="search" [(ngModel)]="username" (search)="search(username)"></h2>
+      <ul class="users">
+        <li *ngFor="let user of users">
+          <button [class.selected]="user === selectedUser" type="button" (click)="onSelect(user)">
+            <span class="badge">{{user.id}}</span>
+            <span class="name">{{user.first_name}}</span>
+          </button>
+          <button  type="button" (click)="chat(user)">
+            <span class="lable">Star Chat</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
